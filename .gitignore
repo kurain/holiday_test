@@ -1,0 +1,6 @@
+.bundle
+vendor
+repos/*
+!repos/nao
+dump/*
+!dump/.gitignore
