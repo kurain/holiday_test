@@ -1,3 +1,8 @@
+dependencies:
+  pre:
+    - pip install -U pip
+    - pip install pandas
+
 test:
   override:
     - bundle exec rake test
