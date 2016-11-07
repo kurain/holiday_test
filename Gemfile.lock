@@ -3,6 +3,8 @@ GEM
   specs:
     icalendar (2.4.1)
     minitest (5.9.1)
+    minitest-ci (3.1.0)
+      minitest (~> 5.0, >= 5.0.6)
 
 PLATFORMS
   ruby
@@ -10,6 +12,7 @@ PLATFORMS
 DEPENDENCIES
   icalendar
   minitest
+  minitest-ci
 
 BUNDLED WITH
    1.10.6
