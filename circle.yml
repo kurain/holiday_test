@@ -1,4 +1,4 @@
 test:
   override:
-    - ruby test.rb
+    - bundle exec ruby test.rb
 
