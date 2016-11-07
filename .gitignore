@@ -4,4 +4,3 @@ vendor
 repos/*
 dump/*
 !dump/.gitignore
-test
