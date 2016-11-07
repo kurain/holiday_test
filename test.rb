@@ -52,7 +52,6 @@ class TestCalendar < MiniTest::Test
 
       if not row.all?{|e| e == 'x'}
         m = gen_message(d, row)
-        warn m
         message += m
       end
     end
@@ -61,6 +60,7 @@ class TestCalendar < MiniTest::Test
 
   def test_longterm
     files = @@files.select{|item| item !~ /nao.txt$/ }
+    ENV['END_YEAR'] = '2030'
     _test_holidays(files, 'TEST LONGTERM')
   end
 

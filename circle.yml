@@ -2,9 +2,10 @@ dependencies:
   pre:
     - pip install -U pip
     - pip install pandas
+    - pip install pandas_datareader
 
 test:
   override:
     - bundle exec rake test
- 
+
 
