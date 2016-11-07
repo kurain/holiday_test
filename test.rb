@@ -1,9 +1,4 @@
-require 'pp'
 require 'date'
-
-
-
-
 require 'minitest/unit'
 
 MiniTest::Unit.autorun
