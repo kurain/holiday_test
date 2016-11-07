@@ -36,12 +36,7 @@ days.each do |d|
   next if ENV['IGNORE_TSE_HOLIDAY'] and is_tse_holiday(d)
 
   row = files.map{|f| data[f][d] ? 'x' : '-'}
-  assert(row.all?{|e| e == 'x'}, ->(){ (['Not Equal', d] + row).join(',') })
-end
-
-require 'minitest/unit'
-
-MiniTest::Unit.autorun
-
-class TestCalendar < MiniTest::Unit::TestCase
+  unless row.all?{|e| e == 'x'}
+    puts (['Not Equal', d] + row).join(',')
+  end
 end

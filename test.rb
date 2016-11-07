@@ -1,9 +1,7 @@
 require 'date'
-require 'minitest/unit'
+require 'minitest/autorun'
 
-MiniTest::Unit.autorun
-
-class TestCalendar < MiniTest::Unit::TestCase
+class TestCalendar < MiniTest::Test
   def is_tse_holiday(d)
     date = Date.parse(d)
     return true if date.wday == 0
