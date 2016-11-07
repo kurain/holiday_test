@@ -43,6 +43,7 @@ class TestCalendar < MiniTest::Test
     days = days.sort.uniq
 
     message = ''
+    has_error = nil
     days.each do |d|
       next if ENV['START_YEAR'] and d.split('-').first < ENV['START_YEAR']
       break if ENV['END_YEAR'] and d.split('-').first > ENV['END_YEAR']
@@ -51,11 +52,12 @@ class TestCalendar < MiniTest::Test
       row = files.map{|f| data[f][d] ? 'x' : '-'}
 
       if not row.all?{|e| e == 'x'}
+        has_error = true
         m = gen_message(d, row)
         message += m
       end
     end
-    assert_empty(message, message)
+    assert(!has_error, message)
   end
 
   def test_longterm
