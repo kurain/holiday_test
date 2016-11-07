@@ -1,10 +1,15 @@
+GIT
+  remote: https://github.com/circleci/minitest-ci.git
+  revision: dd7d0fdb8451e21251d5f620a1b2e7f76ded6da9
+  specs:
+    minitest-ci (3.1.0)
+      minitest (~> 5.0, >= 5.0.6)
+
 GEM
   remote: https://rubygems.org/
   specs:
     icalendar (2.4.1)
     minitest (5.9.1)
-    minitest-ci (3.1.0)
-      minitest (~> 5.0, >= 5.0.6)
 
 PLATFORMS
   ruby
@@ -12,7 +17,7 @@ PLATFORMS
 DEPENDENCIES
   icalendar
   minitest
-  minitest-ci
+  minitest-ci!
 
 BUNDLED WITH
    1.10.6
