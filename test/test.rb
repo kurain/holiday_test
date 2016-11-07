@@ -24,7 +24,7 @@ class TestCalendar < MiniTest::Test
   def gen_message(date, row)
     m = "Not Equal on #{date}\n"
     row.each_with_index do |val, i|
-      m += "  #{@@files[i]}\t#{val}\n"
+      m += sprintf "%-30s %s\n", @@files[i], val
     end
     m
   end
