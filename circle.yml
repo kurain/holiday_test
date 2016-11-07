@@ -6,6 +6,6 @@ dependencies:
 
 test:
   override:
-    - bundle exec rake test
+    - bundle exec rake test TESTOPTS="--ci-dir=$CIRCLE_TEST_REPORTS/reports"
 
 
