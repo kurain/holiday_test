@@ -6,5 +6,8 @@ bundle exec ruby -rdate -ryaml -e 'YAML.load(ARGF).keys.each{|d| puts d}' repos/
 
 PYTHONPATH=./repos/japandas python tools/dump.py > dump/japandas.txt
 
+if [ ! -d repos/nao ]; then
+    mkdir repos/nao
+fi
 bundle exec ruby tools/nao.rb > repos/nao/nao.csv
 cut -d, -f1 repos/nao/nao.csv > dump/nao.txt
